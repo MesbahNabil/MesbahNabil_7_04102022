@@ -1,0 +1,27 @@
+.gallery {
+  padding: 1rem;
+  padding-top: 2.5rem;
+  gap: 2rem;
+  margin-top: 3rem;
+  background: #f7f7f7;
+  width: 100%;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+@media (max-width: 550px) {
+  .gallery {
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .gallery {
+    background: white;
+    padding: 0;
+  }
+}

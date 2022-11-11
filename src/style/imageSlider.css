@@ -1,0 +1,101 @@
+.slider {
+  position: relative;
+  height: 255px;
+  width: 100%;
+}
+.slider__count {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  right: 50%;
+  color: white;
+  z-index: 10;
+}
+@media screen and (max-width: 550px) {
+  .slider__count {
+    display: none;
+  }
+}
+.slider__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  -webkit-animation: appearing 1s ease-in-out forwards;
+          animation: appearing 1s ease-in-out forwards;
+}
+.slider__chevron-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+  cursor: pointer;
+}
+.slider__chevron-container--right {
+  right: 5px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.slider__chevron-container--left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  left: 5px;
+}
+.slider__chevron-container:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.slider__chevron-slider {
+  height: 40px;
+  width: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media screen and (min-width: 750px) {
+  .slider__chevron-slider {
+    height: 80px;
+    width: 47px;
+  }
+}
+.slider__chevron-prev {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.slider__chevron-next {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+@media screen and (min-width: 750px) {
+  .slider {
+    height: 415px;
+    border-radius: 25px;
+  }
+}
+
+@-webkit-keyframes appearing {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appearing {
+  to {
+    opacity: 1;
+  }
+}
