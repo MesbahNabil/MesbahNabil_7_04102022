@@ -2,7 +2,8 @@
 
 Project 7 of OpenClassroom's
 
-![1668203741422](image/README/1668203741422.png)
+
+![img]()
 
 ## Available Scripts
 
