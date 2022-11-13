@@ -11,7 +11,7 @@ const StarRating = ({ value }) => {
 	// En partant d'un tableau vide,
 
 	const rating = []
-	// on remplit autant de fois que le nombre de les paramètres de notre composant,
+	// on remplit autant de fois que le nombre de paramètres de notre composant,
 	for (let index = 0; index < value; index++) {
 		rating.push(
 			<img key={index} className="starActive star" src={starActive}></img>
