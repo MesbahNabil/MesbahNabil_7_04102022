@@ -5,26 +5,23 @@ import logoVector from "./vector.png"
 
 // Style
 import "../../style/dropdown.css"
+// condition du compo en fonction si array ou txt, typeof array or string
 
 const Dropdown = ({ title, content, childKey }) => {
 	const [isOpen, setIsOpen] = useState(false)
 	const heightRef = useRef()
+	return (
+		<div key={childKey} className="dropdown">
+
+			<div
+				onClick={() => setIsOpen(!isOpen)}
+				className={isOpen ? "dropdown__banner active" : "dropdown__banner"}>
+				<h3 className="dropdown__banner__title">{title}</h3>
+				<img
+				className={
 
 	
 
-	// condition du compo en fonction si array ou txt, typeof array or string
-
-	return (
-		<div key={childKey} className="dropdown">
-			<div
-				onClick={() => setIsOpen(!isOpen)}
-				className={
-					isOpen ? "dropdown__banner active" : "dropdown__banner"
-				}
-			>
-				<h3 className="dropdown__banner__title">{title}</h3>
-				<img
-					className={
 						isOpen
 							? "dropdown__banner__logo active"
 							: "dropdown__banner__logo"
@@ -35,12 +32,7 @@ const Dropdown = ({ title, content, childKey }) => {
 			<div
 				className="dropdown__content"
 				ref={heightRef}
-				style={
-					isOpen
-						? { height: heightRef.current.scrollHeight + "px" }
-						: { height: "0px" }
-				}
-			>
+				style={isOpen? { height: heightRef.current.scrollHeight + "px" }: { height: "0px" }}>
 				<div className="dropdown__content__child">
 					{typeof content === "string" ? (
 						content
